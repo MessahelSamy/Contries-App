@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+
+* {
+  padding: 0;
+}
+footer {
+  display: flex;
+  justify-content: center;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  margin: auto;
+  bottom: 0;
+  width: auto;
+  /* background-color: rgba(201, 201, 201, 0.7); */
+  /* background-color: #868e96; */
+  z-index: 1;
+  /*left: 32.5%;*/
+  /*
+  background: #0f2027;
+  background: -webkit-linear-gradient(to bottom, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to bottom, #2c5364, #203a43, #0f2027);*/
+}
+.ul-footer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.list-footer {
+  /*background: radial-gradient(circle, #2c5364 33%, #0f2027 100%);*/
+  background-color: #212529f2;
+  list-style: none;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  margin-right: 22px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.list-footer:hover {
+  transform: scale(0.795);
+}
+.list-footer-gmail {
+  margin-right: 0px;
+}
+
+.a-footer {
+  font-size: 22px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: #000000;
+}
+.icon-footer {
+  margin-top: 15px;
+  width: 60px;
+  color: #ffffff /*#dcefff*/;
+}
+
+@media screen and (max-width: 940px) {
+  .footer {
+    width: 100%;
+    left: auto;
+  }
+  .list-footer {
+    margin-right: 2px;
+  }
+}

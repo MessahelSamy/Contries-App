@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
+
+body {
+  /*background: rgba(255, 255, 0, 0.5);background-color: #6a93cb;
+  background-image: linear-gradient(315deg, #6a93cb 0%, #a4bfef 74%);
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+  background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
+  */
+  background-color: #343a40;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+img {
+  width: 200px;
+  height: 120px;
+  border: solid 1px transparent;
+  border-radius: 10px;
+  margin-left: 2px;
+}
+
+.card {
+  --background: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  width: 220px;
+  height: 270px;
+  padding: 5px;
+  margin: 0px auto 100px auto;
+  border-radius: 1rem;
+  overflow: visible;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.9);
+  filter: blur(30px);
+  background: var(--background);
+  transition: opacity 0.5s;
+}
+
+.card-info {
+  --color: #212529;
+  background: var(--color);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: 0.7rem;
+  transition: all 1s;
+}
+
+.card .title {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  margin: 2px 0px;
+}
+.p-region {
+  margin-bottom: 20px;
+}
+/*Hover*/
+.card:hover::after {
+  opacity: 0;
+}
+.card:hover .title {
+  font-weight: 400;
+}
+.card:hover .card-info {
+  color: #dee2e6;
+  transition: color 0.8s ease-in;
+}
+/*-----------------------------------------------------------------*/
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.group {
+  display: flex;
+  position: relative;
+  align-items: center;
+  line-height: 28px;
+  max-width: 190px;
+}
+
+.input {
+  font-family: "Chakra Petch", sans-serif;
+  width: 100%;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  background-color: #f1f3f5;
+  color: #e9ecef;
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
+  color: #0e5296;
+}
+
+.input:focus,
+input:hover {
+  outline: none;
+  border-color: #dee2e6;
+  background-color: #212529;
+  box-shadow: 0 0 0 2px rgba(223, 227, 231, 0.7);
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+}
+
+.select-region {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  background-color: #f1f3f5;
+  color: #212529;
+  height: 40px;
+  border: transparent;
+  border-radius: 0 8px 8px 0;
+}
+
+option {
+  color: #e9ecef;
+  background-color: #212529;
+}
